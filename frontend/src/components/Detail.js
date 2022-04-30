@@ -4,6 +4,8 @@ import { useParams } from 'react-router-dom';
 import db from '../firebase';
 import Landing from './Landing';
 import MovieInfo from './Landing';
+import PlayIcon from '../images/play-icon-white.png';
+import GroupIcon from '../images/group-icon.png';
 
 function Detail() {
     const { id } = useParams();
@@ -21,7 +23,7 @@ function Detail() {
         //         // s
         //     }
         // });
-        fetch(`http://disneyclone.xyz/api/movies/${id}`, {
+        fetch(`https://disneyclone.xyz/api/movies/${id}`, {
             'method': 'GET',
             headers: {
                 'Content-type': 'application/json'
@@ -43,18 +45,18 @@ function Detail() {
             </ImageTitle>
             <Controls>
                 <PlayButton>
-                    <img src="/images/play-icon-white.png"/>
+                    <img src={PlayIcon}/>
                     <span>PLAY</span>
                 </PlayButton>
                 <TrailerButton>
-                    <img src="/images/play-icon-white.png"/>
+                    <img src={PlayIcon}/>
                     <span>TRAILER</span>
                 </TrailerButton>
                 <AddButton>
                     <span>+</span>
                 </AddButton>
                 <GroupWatchButton>
-                    <img src="/images/group-icon.png"/>
+                    <img src={GroupIcon}/>
                 </GroupWatchButton>
             </Controls>
             <SubTitle>
