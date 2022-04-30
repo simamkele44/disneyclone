@@ -19,7 +19,7 @@ function Home() {
         //     dispatch(setMovies(tempMovies));
         //     //console.log(tempMovies)
         // })
-        fetch('http://127.0.0.1:8000/api/movies/', {
+        fetch('https://disneyclone.xyz/api/movies/', {
             'method': 'GET',
             headers: {
                 'Content-type': 'application/json'
