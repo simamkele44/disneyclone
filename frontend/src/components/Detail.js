@@ -21,7 +21,7 @@ function Detail() {
         //         // s
         //     }
         // });
-        fetch(`http://127.0.0.1:8000/api/movies/${id}`, {
+        fetch(`http://disneyclone.xyz/api/movies/${id}`, {
             'method': 'GET',
             headers: {
                 'Content-type': 'application/json'
